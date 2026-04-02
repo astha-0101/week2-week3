@@ -1,52 +1,51 @@
-# week2-week3
-# Transaction Fee Sorting System
+#  Client Risk Score Ranking
 
-## Overview
+##  Overview
 
-A simple banking audit system that sorts transactions by fee and detects high-fee outliers.
+A simple system to sort client risk scores for prioritizing high-risk accounts.
 
----
 
-## Features
 
-* 🔹 Bubble Sort → sort by fee (ascending) for small datasets
-* 🔹 Insertion Sort → sort by fee + timestamp
-* 🔹 Stable sorting (handles duplicates)
-* 🔹 Detects high-fee transactions (> $50)
+##  Features
 
----
+*  Bubble Sort → riskScore (ascending)
+*  Insertion Sort → riskScore DESC + accountBalance
+*  Top 10 highest risk clients
 
-## Concept
 
-* Bubble Sort & Insertion Sort
-* Time Complexity: O(n²)
-* Stable sorting
 
----
+##  Concepts
 
-## Input
+* In-place sorting (O(1) space)
+* Bubble & Insertion Sort
+* Adaptive sorting
 
-```
-id1, fee=10.5, ts=10:00  
-id2, fee=25.0, ts=09:30  
-id3, fee=5.0, ts=10:15  
-```
+
+
+##Input
+
+
+clientC:80, clientA:20, clientB:50
+
 
 ---
 
 ## Output
 
-```
-Bubble: [id3, id1, id2]  
-Insertion: [id3, id1, id2]  
-Outliers: None  
-```
+
+Bubble: [A:20, B:50, C:80]
+Insertion: [C:80, B:50, A:20]
+Top Risks: C(80), B(50), A(20)
+
 
 ---
 
 ## Use Cases
 
-* Audit reports
+* KYC risk analysis
+* Loan approval priority
 * Fraud detection
-* Compliance analysis
+
+
+
 
